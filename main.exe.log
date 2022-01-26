@@ -1,0 +1,1178 @@
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\79022\Desktop\ElMagazin5\main.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00453DFC в функции _M_is_leaked() в файле c:/users/79022/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h на строке 45. Попытка прочесть данные по адресу 0xFFFFFFFC в модуле C:\Users\79022\Desktop\ElMagazin5\main.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2021-10-03 23:49:44 +0400], Instance: 0x0050A2FC (32-bit), Flags: CMdRe0, Thread: 0x3F34 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00453DFC in C:\Users\79022\Desktop\ElMagazin5\main.exe: _M_is_leaked() at c:/users/79022/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 1 0x00482EBB in C:\Users\79022\Desktop\ElMagazin5\main.exe: swap() at c:/users/79022/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 2 0x0048A889 in C:\Users\79022\Desktop\ElMagazin5\main.exe: operator=() at c:/users/79022/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 3 0x0044E6BA in C:\Users\79022\Desktop\ElMagazin5\main.exe: operator=() at c:/users/79022/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 4 0x0042F1E1 in C:\Users\79022\Desktop\ElMagazin5\main.exe: main() at C:/Users/79022/Desktop/ElMagazin5/main.cpp (203):
+
+    201:                                       menuPicture[npic].h,
+    202:                                       menuPicture[npic].visible,
+=>  203:                                       menuPicture[npic].category};
+    204:           numberpic++;
+    205:       }
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at C:\Users\79022\Desktop\ElMagazin5\main.cpp (195):
+
+    193:       txMouseX() <= menuPicture[npic].x+menuPicture[npic].w &&
+    194:       txMouseY() >= menuPicture[npic].y &&
+=>  195:       txMouseY() <= menuPicture[npic].y+menuPicture[npic].h)
+    196:       {
+    197:          centralPicture[numberpic] = {300,
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-10-03 23:49:44 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\79022\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Nov  2 2021 18:17:41, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 02 2021 18:17:48
+
+Run file:	C:\Users\79022\Desktop\ElMagazin5\main.exe
+Directory:	C:\Users\79022\Desktop\ElMagazin5
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\79022\Desktop\ElMagazin5\main.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00453DFC в функции _M_is_leaked() в файле c:/users/79022/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h на строке 45. Попытка прочесть данные по адресу 0xFFFFFFFC в модуле C:\Users\79022\Desktop\ElMagazin5\main.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 171, Date: 2021-10-03 23:49:44 +0400], Instance: 0x0050A2FC (32-bit), Flags: CMdRe0, Thread: 0x3F34 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00453DFC in C:\Users\79022\Desktop\ElMagazin5\main.exe: _M_is_leaked() at c:/users/79022/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 1 0x00482EBB in C:\Users\79022\Desktop\ElMagazin5\main.exe: swap() at c:/users/79022/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 2 0x0048A889 in C:\Users\79022\Desktop\ElMagazin5\main.exe: operator=() at c:/users/79022/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 3 0x0044E6BA in C:\Users\79022\Desktop\ElMagazin5\main.exe: operator=() at c:/users/79022/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 4 0x0042F1E1 in C:\Users\79022\Desktop\ElMagazin5\main.exe: main() at C:/Users/79022/Desktop/ElMagazin5/main.cpp (203):
+
+    201:                                       menuPicture[npic].h,
+    202:                                       menuPicture[npic].visible,
+=>  203:                                       menuPicture[npic].category};
+    204:           numberpic++;
+    205:       }
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at C:\Users\79022\Desktop\ElMagazin5\main.cpp (195):
+
+    193:       txMouseX() <= menuPicture[npic].x+menuPicture[npic].w &&
+    194:       txMouseY() >= menuPicture[npic].y &&
+=>  195:       txMouseY() <= menuPicture[npic].y+menuPicture[npic].h)
+    196:       {
+    197:          centralPicture[numberpic] = {300,
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-10-03 23:49:44 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\79022\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Nov  2 2021 18:17:41, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 02 2021 18:17:48
+
+Run file:	C:\Users\79022\Desktop\ElMagazin5\main.exe
+Directory:	C:\Users\79022\Desktop\ElMagazin5
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\79022\Desktop\ElMagazin5\main.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x004541DC в функции _M_is_leaked() в файле c:/users/79022/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h на строке 45. Попытка прочесть данные по адресу 0xFFFFFFFC в модуле C:\Users\79022\Desktop\ElMagazin5\main.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2021-10-03 23:49:44 +0400], Instance: 0x0050A2FC (32-bit), Flags: CMdRe0, Thread: 0x838 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004541DC in C:\Users\79022\Desktop\ElMagazin5\main.exe: _M_is_leaked() at c:/users/79022/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 1 0x0048329B in C:\Users\79022\Desktop\ElMagazin5\main.exe: swap() at c:/users/79022/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 2 0x0048AC69 in C:\Users\79022\Desktop\ElMagazin5\main.exe: operator=() at c:/users/79022/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 3 0x0044EA9A in C:\Users\79022\Desktop\ElMagazin5\main.exe: operator=() at c:/users/79022/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 4 0x0042E7DD in C:\Users\79022\Desktop\ElMagazin5\main.exe: main() at C:/Users/79022/Desktop/ElMagazin5/main.cpp (98):
+
+     96:    menuPicture[18] = {50, 100, txLoadImage("cupboard1.bmp"), 100, 100, false, "Шкафы"};
+     97:    menuPicture[19] = {50, 200, txLoadImage("cupboard2.bmp"), 100, 100, false, "Шкафы"};
+=>   98:    menuPicture[20] = {50, 300, txLoadImage("cupboard3.bmp"), 100, 100, false, "Шкафы"};
+     99: 
+    100: 
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at C:\Users\79022\Desktop\ElMagazin5\main.cpp (98):
+
+     96:    menuPicture[18] = {50, 100, txLoadImage("cupboard1.bmp"), 100, 100, false, "Шкафы"};
+     97:    menuPicture[19] = {50, 200, txLoadImage("cupboard2.bmp"), 100, 100, false, "Шкафы"};
+=>   98:    menuPicture[20] = {50, 300, txLoadImage("cupboard3.bmp"), 100, 100, false, "Шкафы"};
+     99: 
+    100: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-10-03 23:49:44 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\79022\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Nov  2 2021 20:03:40, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 02 2021 20:03:51
+
+Run file:	C:\Users\79022\Desktop\ElMagazin5\main.exe
+Directory:	C:\Users\79022\Desktop\ElMagazin5
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\79022\Desktop\ElMagazin5\main.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x004541DC в функции _M_is_leaked() в файле c:/users/79022/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h на строке 45. Попытка прочесть данные по адресу 0xFFFFFFFC в модуле C:\Users\79022\Desktop\ElMagazin5\main.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 171, Date: 2021-10-03 23:49:44 +0400], Instance: 0x0050A2FC (32-bit), Flags: CMdRe0, Thread: 0x838 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004541DC in C:\Users\79022\Desktop\ElMagazin5\main.exe: _M_is_leaked() at c:/users/79022/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 1 0x0048329B in C:\Users\79022\Desktop\ElMagazin5\main.exe: swap() at c:/users/79022/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 2 0x0048AC69 in C:\Users\79022\Desktop\ElMagazin5\main.exe: operator=() at c:/users/79022/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 3 0x0044EA9A in C:\Users\79022\Desktop\ElMagazin5\main.exe: operator=() at c:/users/79022/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 4 0x0042E7DD in C:\Users\79022\Desktop\ElMagazin5\main.exe: main() at C:/Users/79022/Desktop/ElMagazin5/main.cpp (98):
+
+     96:    menuPicture[18] = {50, 100, txLoadImage("cupboard1.bmp"), 100, 100, false, "Шкафы"};
+     97:    menuPicture[19] = {50, 200, txLoadImage("cupboard2.bmp"), 100, 100, false, "Шкафы"};
+=>   98:    menuPicture[20] = {50, 300, txLoadImage("cupboard3.bmp"), 100, 100, false, "Шкафы"};
+     99: 
+    100: 
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at C:\Users\79022\Desktop\ElMagazin5\main.cpp (98):
+
+     96:    menuPicture[18] = {50, 100, txLoadImage("cupboard1.bmp"), 100, 100, false, "Шкафы"};
+     97:    menuPicture[19] = {50, 200, txLoadImage("cupboard2.bmp"), 100, 100, false, "Шкафы"};
+=>   98:    menuPicture[20] = {50, 300, txLoadImage("cupboard3.bmp"), 100, 100, false, "Шкафы"};
+     99: 
+    100: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-10-03 23:49:44 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\79022\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Nov  2 2021 20:03:40, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 02 2021 20:03:51
+
+Run file:	C:\Users\79022\Desktop\ElMagazin5\main.exe
+Directory:	C:\Users\79022\Desktop\ElMagazin5
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: C:\Users\79022\Desktop\ElMagazin5\main.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0045497C в функции _M_is_leaked() в файле c:/users/79022/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h на строке 45. Попытка прочесть данные по адресу 0x000070FC в модуле C:\Users\79022\Desktop\ElMagazin5\main.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2021-10-03 23:49:44 +0400], Instance: 0x0050B2FC (32-bit), Flags: CMdRe0, Thread: 0x1480 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0045497C in C:\Users\79022\Desktop\ElMagazin5\main.exe: _M_is_leaked() at c:/users/79022/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 1 0x00483A3B in C:\Users\79022\Desktop\ElMagazin5\main.exe: swap() at c:/users/79022/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 2 0x0048B409 in C:\Users\79022\Desktop\ElMagazin5\main.exe: operator=() at c:/users/79022/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 3 0x0044F23A in C:\Users\79022\Desktop\ElMagazin5\main.exe: operator=() at c:/users/79022/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 4 0x0042FBA0 in C:\Users\79022\Desktop\ElMagazin5\main.exe: main() at C:/Users/79022/Desktop/ElMagazin5/main.cpp (220):
+
+    218:                                       menuPicture[npic].h,
+    219:                                       menuPicture[npic].visible,
+=>  220:                                       menuPicture[npic].category};
+    221:           numberpic++;
+    222:       }
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at C:\Users\79022\Desktop\ElMagazin5\main.cpp (212):
+
+    210:       txMouseX() <= menuPicture[npic].x+menuPicture[npic].w &&
+    211:       txMouseY() >= menuPicture[npic].y &&
+=>  212:       txMouseY() <= menuPicture[npic].y+menuPicture[npic].h)
+    213:       {
+    214:          centralPicture[numberpic] = {300,
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-10-03 23:49:44 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\79022\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Nov  4 2021 20:17:09, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 04 2021 20:17:15
+
+Run file:	C:\Users\79022\Desktop\ElMagazin5\main.exe
+Directory:	C:\Users\79022\Desktop\ElMagazin5
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\79022\Desktop\ElMagazin5\main.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0045497C в функции _M_is_leaked() в файле c:/users/79022/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h на строке 45. Попытка прочесть данные по адресу 0x000070FC в модуле C:\Users\79022\Desktop\ElMagazin5\main.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 171, Date: 2021-10-03 23:49:44 +0400], Instance: 0x0050B2FC (32-bit), Flags: CMdRe0, Thread: 0x1480 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0045497C in C:\Users\79022\Desktop\ElMagazin5\main.exe: _M_is_leaked() at c:/users/79022/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 1 0x00483A3B in C:\Users\79022\Desktop\ElMagazin5\main.exe: swap() at c:/users/79022/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 2 0x0048B409 in C:\Users\79022\Desktop\ElMagazin5\main.exe: operator=() at c:/users/79022/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 3 0x0044F23A in C:\Users\79022\Desktop\ElMagazin5\main.exe: operator=() at c:/users/79022/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 4 0x0042FBA0 in C:\Users\79022\Desktop\ElMagazin5\main.exe: main() at C:/Users/79022/Desktop/ElMagazin5/main.cpp (220):
+
+    218:                                       menuPicture[npic].h,
+    219:                                       menuPicture[npic].visible,
+=>  220:                                       menuPicture[npic].category};
+    221:           numberpic++;
+    222:       }
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at C:\Users\79022\Desktop\ElMagazin5\main.cpp (212):
+
+    210:       txMouseX() <= menuPicture[npic].x+menuPicture[npic].w &&
+    211:       txMouseY() >= menuPicture[npic].y &&
+=>  212:       txMouseY() <= menuPicture[npic].y+menuPicture[npic].h)
+    213:       {
+    214:          centralPicture[numberpic] = {300,
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-10-03 23:49:44 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\79022\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Nov  4 2021 20:17:09, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 04 2021 20:17:14
+
+Run file:	C:\Users\79022\Desktop\ElMagazin5\main.exe
+Directory:	C:\Users\79022\Desktop\ElMagazin5
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\79022\Desktop\ElMagazin5\main.exe, файл: c:\users\79022\codeblocks\codeblocks\mingw\include\txlib.h, строка: 10891, функция: bool {anonymous}::TX::_txBuffer_Delete(HDC__**),
+
+Сообщение: Параметр "*dc" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2021-10-03 23:49:44 +0400], Instance: 0x0050B2FC (32-bit), Flags: CMdRe0, Thread: 0x520 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00410E8D in C:\Users\79022\Desktop\ElMagazin5\main.exe: _txBuffer_Delete() at c:/users/79022/codeblocks/codeblocks/mingw/include/txlib.h (10891)
+# 1 0x00422C39 in C:\Users\79022\Desktop\ElMagazin5\main.exe: txDeleteDC() at c:/users/79022/codeblocks/codeblocks/mingw/include/txlib.h (13634)
+# 2 0x00422EA9 in C:\Users\79022\Desktop\ElMagazin5\main.exe: txDeleteDC() at c:/users/79022/codeblocks/codeblocks/mingw/include/txlib.h (13656)
+
+# 3 0x0042FD90 in C:\Users\79022\Desktop\ElMagazin5\main.exe: main() at C:/Users/79022/Desktop/ElMagazin5/main.cpp (250):
+
+    248: {
+    249:  txDeleteDC(menuPicture[npic].image);
+=>  250:  txDeleteDC(centralPicture[npic].image);
+    251: }
+    252: 
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::_txBuffer_Delete(HDC__**) at c:\users\79022\codeblocks\codeblocks\mingw\include\txlib.h (10891):
+
+  10889: $1  if (_TX_ARGUMENT_FAILED (dc)) return false;
+  10890: $   if (                   !*dc)  return false;
+=>10891: $   if (_TX_HDC_FAILED     (*dc)) return false;
+  10892: 
+  10893: $   if (!Win32::GetObjectType (Win32::GetCurrentObject (*dc, OBJ_BITMAP))) return false;
+
+# 1 in bool {anonymous}::TX::txDeleteDC(HDC__**) at c:\users\79022\codeblocks\codeblocks\mingw\include\txlib.h (13634):
+
+  13632: 
+  13633: $   HDC  dc = *pdc;
+=>13634: $   bool ok = _txBuffer_Delete (pdc);
+  13635: $   if (!ok) return false;
+  13636: 
+
+# 2 in bool {anonymous}::TX::txDeleteDC(HDC) at c:\users\79022\codeblocks\codeblocks\mingw\include\txlib.h (13656):
+
+  13654: bool txDeleteDC (HDC dc)
+  13655:     {
+=>13656: $1  return txDeleteDC (&dc);
+  13657:     }
+  13658: 
+
+# 3 in int main() at C:\Users\79022\Desktop\ElMagazin5\main.cpp (250):
+
+    248: {
+    249:  txDeleteDC(menuPicture[npic].image);
+=>  250:  txDeleteDC(centralPicture[npic].image);
+    251: }
+    252: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-10-03 23:49:44 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\79022\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Nov  4 2021 20:30:53, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 04 2021 20:31:00
+
+Run file:	C:\Users\79022\Desktop\ElMagazin5\main.exe
+Directory:	C:\Users\79022\Desktop\ElMagazin5
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\79022\Desktop\ElMagazin5\main.exe, файл: c:\users\79022\codeblocks\codeblocks\mingw\include\txlib.h, строка: 10891, функция: bool {anonymous}::TX::_txBuffer_Delete(HDC__**),
+
+Сообщение: Параметр "*dc" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#2: TXLib [Ver: 00173a, Rev: 171, Date: 2021-10-03 23:49:44 +0400], Instance: 0x0050B2FC (32-bit), Flags: CMdRe0, Thread: 0x520 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00410E8D in C:\Users\79022\Desktop\ElMagazin5\main.exe: _txBuffer_Delete() at c:/users/79022/codeblocks/codeblocks/mingw/include/txlib.h (10891)
+# 1 0x00422C39 in C:\Users\79022\Desktop\ElMagazin5\main.exe: txDeleteDC() at c:/users/79022/codeblocks/codeblocks/mingw/include/txlib.h (13634)
+# 2 0x00422EA9 in C:\Users\79022\Desktop\ElMagazin5\main.exe: txDeleteDC() at c:/users/79022/codeblocks/codeblocks/mingw/include/txlib.h (13656)
+
+# 3 0x0042FD90 in C:\Users\79022\Desktop\ElMagazin5\main.exe: main() at C:/Users/79022/Desktop/ElMagazin5/main.cpp (250):
+
+    248: {
+    249:  txDeleteDC(menuPicture[npic].image);
+=>  250:  txDeleteDC(centralPicture[npic].image);
+    251: }
+    252: 
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::_txBuffer_Delete(HDC__**) at c:\users\79022\codeblocks\codeblocks\mingw\include\txlib.h (10891):
+
+  10889: $1  if (_TX_ARGUMENT_FAILED (dc)) return false;
+  10890: $   if (                   !*dc)  return false;
+=>10891: $   if (_TX_HDC_FAILED     (*dc)) return false;
+  10892: 
+  10893: $   if (!Win32::GetObjectType (Win32::GetCurrentObject (*dc, OBJ_BITMAP))) return false;
+
+# 1 in bool {anonymous}::TX::txDeleteDC(HDC__**) at c:\users\79022\codeblocks\codeblocks\mingw\include\txlib.h (13634):
+
+  13632: 
+  13633: $   HDC  dc = *pdc;
+=>13634: $   bool ok = _txBuffer_Delete (pdc);
+  13635: $   if (!ok) return false;
+  13636: 
+
+# 2 in bool {anonymous}::TX::txDeleteDC(HDC) at c:\users\79022\codeblocks\codeblocks\mingw\include\txlib.h (13656):
+
+  13654: bool txDeleteDC (HDC dc)
+  13655:     {
+=>13656: $1  return txDeleteDC (&dc);
+  13657:     }
+  13658: 
+
+# 3 in int main() at C:\Users\79022\Desktop\ElMagazin5\main.cpp (250):
+
+    248: {
+    249:  txDeleteDC(menuPicture[npic].image);
+=>  250:  txDeleteDC(centralPicture[npic].image);
+    251: }
+    252: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-10-03 23:49:44 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\79022\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Nov  4 2021 20:30:53, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 04 2021 20:31:00
+
+Run file:	C:\Users\79022\Desktop\ElMagazin5\main.exe
+Directory:	C:\Users\79022\Desktop\ElMagazin5
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\79022\Desktop\ElMagazin5\main.exe, файл: c:\users\79022\codeblocks\codeblocks\mingw\include\txlib.h, строка: 10891, функция: bool {anonymous}::TX::_txBuffer_Delete(HDC__**),
+
+Сообщение: Параметр "*dc" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#3: TXLib [Ver: 00173a, Rev: 171, Date: 2021-10-03 23:49:44 +0400], Instance: 0x0050B2FC (32-bit), Flags: CMdRe0, Thread: 0x520 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00410E8D in C:\Users\79022\Desktop\ElMagazin5\main.exe: _txBuffer_Delete() at c:/users/79022/codeblocks/codeblocks/mingw/include/txlib.h (10891)
+# 1 0x00422C39 in C:\Users\79022\Desktop\ElMagazin5\main.exe: txDeleteDC() at c:/users/79022/codeblocks/codeblocks/mingw/include/txlib.h (13634)
+# 2 0x00422EA9 in C:\Users\79022\Desktop\ElMagazin5\main.exe: txDeleteDC() at c:/users/79022/codeblocks/codeblocks/mingw/include/txlib.h (13656)
+
+# 3 0x0042FD90 in C:\Users\79022\Desktop\ElMagazin5\main.exe: main() at C:/Users/79022/Desktop/ElMagazin5/main.cpp (250):
+
+    248: {
+    249:  txDeleteDC(menuPicture[npic].image);
+=>  250:  txDeleteDC(centralPicture[npic].image);
+    251: }
+    252: 
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::_txBuffer_Delete(HDC__**) at c:\users\79022\codeblocks\codeblocks\mingw\include\txlib.h (10891):
+
+  10889: $1  if (_TX_ARGUMENT_FAILED (dc)) return false;
+  10890: $   if (                   !*dc)  return false;
+=>10891: $   if (_TX_HDC_FAILED     (*dc)) return false;
+  10892: 
+  10893: $   if (!Win32::GetObjectType (Win32::GetCurrentObject (*dc, OBJ_BITMAP))) return false;
+
+# 1 in bool {anonymous}::TX::txDeleteDC(HDC__**) at c:\users\79022\codeblocks\codeblocks\mingw\include\txlib.h (13634):
+
+  13632: 
+  13633: $   HDC  dc = *pdc;
+=>13634: $   bool ok = _txBuffer_Delete (pdc);
+  13635: $   if (!ok) return false;
+  13636: 
+
+# 2 in bool {anonymous}::TX::txDeleteDC(HDC) at c:\users\79022\codeblocks\codeblocks\mingw\include\txlib.h (13656):
+
+  13654: bool txDeleteDC (HDC dc)
+  13655:     {
+=>13656: $1  return txDeleteDC (&dc);
+  13657:     }
+  13658: 
+
+# 3 in int main() at C:\Users\79022\Desktop\ElMagazin5\main.cpp (250):
+
+    248: {
+    249:  txDeleteDC(menuPicture[npic].image);
+=>  250:  txDeleteDC(centralPicture[npic].image);
+    251: }
+    252: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-10-03 23:49:44 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\79022\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Nov  4 2021 20:30:53, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 04 2021 20:31:00
+
+Run file:	C:\Users\79022\Desktop\ElMagazin5\main.exe
+Directory:	C:\Users\79022\Desktop\ElMagazin5
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\79022\Desktop\ElMagazin5\main.exe, файл: c:\users\79022\codeblocks\codeblocks\mingw\include\txlib.h, строка: 10891, функция: bool {anonymous}::TX::_txBuffer_Delete(HDC__**),
+
+Сообщение: Параметр "*dc" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2021-10-03 23:49:44 +0400], Instance: 0x0050B2FC (32-bit), Flags: CMdRe0, Thread: 0x4D4 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00410E8D in C:\Users\79022\Desktop\ElMagazin5\main.exe: _txBuffer_Delete() at c:/users/79022/codeblocks/codeblocks/mingw/include/txlib.h (10891)
+# 1 0x00422C39 in C:\Users\79022\Desktop\ElMagazin5\main.exe: txDeleteDC() at c:/users/79022/codeblocks/codeblocks/mingw/include/txlib.h (13634)
+# 2 0x00422EA9 in C:\Users\79022\Desktop\ElMagazin5\main.exe: txDeleteDC() at c:/users/79022/codeblocks/codeblocks/mingw/include/txlib.h (13656)
+
+# 3 0x0042FA59 in C:\Users\79022\Desktop\ElMagazin5\main.exe: main() at C:/Users/79022/Desktop/ElMagazin5/main.cpp (250):
+
+    248: {
+    249:  txDeleteDC(menuPicture[npic].image);
+=>  250:  txDeleteDC(centralPicture[npic].image);
+    251: }
+    252: 
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::_txBuffer_Delete(HDC__**) at c:\users\79022\codeblocks\codeblocks\mingw\include\txlib.h (10891):
+
+  10889: $1  if (_TX_ARGUMENT_FAILED (dc)) return false;
+  10890: $   if (                   !*dc)  return false;
+=>10891: $   if (_TX_HDC_FAILED     (*dc)) return false;
+  10892: 
+  10893: $   if (!Win32::GetObjectType (Win32::GetCurrentObject (*dc, OBJ_BITMAP))) return false;
+
+# 1 in bool {anonymous}::TX::txDeleteDC(HDC__**) at c:\users\79022\codeblocks\codeblocks\mingw\include\txlib.h (13634):
+
+  13632: 
+  13633: $   HDC  dc = *pdc;
+=>13634: $   bool ok = _txBuffer_Delete (pdc);
+  13635: $   if (!ok) return false;
+  13636: 
+
+# 2 in bool {anonymous}::TX::txDeleteDC(HDC) at c:\users\79022\codeblocks\codeblocks\mingw\include\txlib.h (13656):
+
+  13654: bool txDeleteDC (HDC dc)
+  13655:     {
+=>13656: $1  return txDeleteDC (&dc);
+  13657:     }
+  13658: 
+
+# 3 in int main() at C:\Users\79022\Desktop\ElMagazin5\main.cpp (250):
+
+    248: {
+    249:  txDeleteDC(menuPicture[npic].image);
+=>  250:  txDeleteDC(centralPicture[npic].image);
+    251: }
+    252: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-10-03 23:49:44 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\79022\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Nov  9 2021 16:32:50, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 09 2021 16:32:59
+
+Run file:	C:\Users\79022\Desktop\ElMagazin5\main.exe
+Directory:	C:\Users\79022\Desktop\ElMagazin5
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\79022\Desktop\ElMagazin6\main.exe, файл: c:\users\79022\codeblocks\codeblocks\mingw\include\txlib.h, строка: 10891, функция: bool {anonymous}::TX::_txBuffer_Delete(HDC__**),
+
+Сообщение: Параметр "*dc" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2021-10-03 23:49:44 +0400], Instance: 0x0050B2FC (32-bit), Flags: CMdRe0, Thread: 0x3230 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00410E8D in C:\Users\79022\Desktop\ElMagazin6\main.exe: _txBuffer_Delete() at c:/users/79022/codeblocks/codeblocks/mingw/include/txlib.h (10891)
+# 1 0x00422C39 in C:\Users\79022\Desktop\ElMagazin6\main.exe: txDeleteDC() at c:/users/79022/codeblocks/codeblocks/mingw/include/txlib.h (13634)
+# 2 0x00422EA9 in C:\Users\79022\Desktop\ElMagazin6\main.exe: txDeleteDC() at c:/users/79022/codeblocks/codeblocks/mingw/include/txlib.h (13656)
+
+# 3 0x0042FA59 in C:\Users\79022\Desktop\ElMagazin6\main.exe: main() at C:/Users/79022/Desktop/ElMagazin6/main.cpp (250):
+
+    248: {
+    249:  txDeleteDC(menuPicture[npic].image);
+=>  250:  txDeleteDC(centralPicture[npic].image);
+    251: }
+    252: 
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::_txBuffer_Delete(HDC__**) at c:\users\79022\codeblocks\codeblocks\mingw\include\txlib.h (10891):
+
+  10889: $1  if (_TX_ARGUMENT_FAILED (dc)) return false;
+  10890: $   if (                   !*dc)  return false;
+=>10891: $   if (_TX_HDC_FAILED     (*dc)) return false;
+  10892: 
+  10893: $   if (!Win32::GetObjectType (Win32::GetCurrentObject (*dc, OBJ_BITMAP))) return false;
+
+# 1 in bool {anonymous}::TX::txDeleteDC(HDC__**) at c:\users\79022\codeblocks\codeblocks\mingw\include\txlib.h (13634):
+
+  13632: 
+  13633: $   HDC  dc = *pdc;
+=>13634: $   bool ok = _txBuffer_Delete (pdc);
+  13635: $   if (!ok) return false;
+  13636: 
+
+# 2 in bool {anonymous}::TX::txDeleteDC(HDC) at c:\users\79022\codeblocks\codeblocks\mingw\include\txlib.h (13656):
+
+  13654: bool txDeleteDC (HDC dc)
+  13655:     {
+=>13656: $1  return txDeleteDC (&dc);
+  13657:     }
+  13658: 
+
+# 3 in int main() at C:\Users\79022\Desktop\ElMagazin6\main.cpp (250):
+
+    248: {
+    249:  txDeleteDC(menuPicture[npic].image);
+=>  250:  txDeleteDC(centralPicture[npic].image);
+    251: }
+    252: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-10-03 23:49:44 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\79022\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 17 2021 20:35:02, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 17 2021 20:35:09
+
+Run file:	C:\Users\79022\Desktop\ElMagazin6\main.exe
+Directory:	C:\Users\79022\Desktop\ElMagazin6
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\79022\Desktop\ElMagazin6\main.exe, файл: c:\users\79022\codeblocks\codeblocks\mingw\include\txlib.h, строка: 10891, функция: bool {anonymous}::TX::_txBuffer_Delete(HDC__**),
+
+Сообщение: Параметр "*dc" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#2: TXLib [Ver: 00173a, Rev: 171, Date: 2021-10-03 23:49:44 +0400], Instance: 0x0050B2FC (32-bit), Flags: CMdRe0, Thread: 0x3230 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00410E8D in C:\Users\79022\Desktop\ElMagazin6\main.exe: _txBuffer_Delete() at c:/users/79022/codeblocks/codeblocks/mingw/include/txlib.h (10891)
+# 1 0x00422C39 in C:\Users\79022\Desktop\ElMagazin6\main.exe: txDeleteDC() at c:/users/79022/codeblocks/codeblocks/mingw/include/txlib.h (13634)
+# 2 0x00422EA9 in C:\Users\79022\Desktop\ElMagazin6\main.exe: txDeleteDC() at c:/users/79022/codeblocks/codeblocks/mingw/include/txlib.h (13656)
+
+# 3 0x0042FA59 in C:\Users\79022\Desktop\ElMagazin6\main.exe: main() at C:/Users/79022/Desktop/ElMagazin6/main.cpp (250):
+
+    248: {
+    249:  txDeleteDC(menuPicture[npic].image);
+=>  250:  txDeleteDC(centralPicture[npic].image);
+    251: }
+    252: 
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::_txBuffer_Delete(HDC__**) at c:\users\79022\codeblocks\codeblocks\mingw\include\txlib.h (10891):
+
+  10889: $1  if (_TX_ARGUMENT_FAILED (dc)) return false;
+  10890: $   if (                   !*dc)  return false;
+=>10891: $   if (_TX_HDC_FAILED     (*dc)) return false;
+  10892: 
+  10893: $   if (!Win32::GetObjectType (Win32::GetCurrentObject (*dc, OBJ_BITMAP))) return false;
+
+# 1 in bool {anonymous}::TX::txDeleteDC(HDC__**) at c:\users\79022\codeblocks\codeblocks\mingw\include\txlib.h (13634):
+
+  13632: 
+  13633: $   HDC  dc = *pdc;
+=>13634: $   bool ok = _txBuffer_Delete (pdc);
+  13635: $   if (!ok) return false;
+  13636: 
+
+# 2 in bool {anonymous}::TX::txDeleteDC(HDC) at c:\users\79022\codeblocks\codeblocks\mingw\include\txlib.h (13656):
+
+  13654: bool txDeleteDC (HDC dc)
+  13655:     {
+=>13656: $1  return txDeleteDC (&dc);
+  13657:     }
+  13658: 
+
+# 3 in int main() at C:\Users\79022\Desktop\ElMagazin6\main.cpp (250):
+
+    248: {
+    249:  txDeleteDC(menuPicture[npic].image);
+=>  250:  txDeleteDC(centralPicture[npic].image);
+    251: }
+    252: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-10-03 23:49:44 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\79022\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 17 2021 20:35:02, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 17 2021 20:35:09
+
+Run file:	C:\Users\79022\Desktop\ElMagazin6\main.exe
+Directory:	C:\Users\79022\Desktop\ElMagazin6
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\79022\Desktop\ElMagazin6\main.exe, файл: c:\users\79022\codeblocks\codeblocks\mingw\include\txlib.h, строка: 10891, функция: bool {anonymous}::TX::_txBuffer_Delete(HDC__**),
+
+Сообщение: Параметр "*dc" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#3: TXLib [Ver: 00173a, Rev: 171, Date: 2021-10-03 23:49:44 +0400], Instance: 0x0050B2FC (32-bit), Flags: CMdRe0, Thread: 0x3230 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00410E8D in C:\Users\79022\Desktop\ElMagazin6\main.exe: _txBuffer_Delete() at c:/users/79022/codeblocks/codeblocks/mingw/include/txlib.h (10891)
+# 1 0x00422C39 in C:\Users\79022\Desktop\ElMagazin6\main.exe: txDeleteDC() at c:/users/79022/codeblocks/codeblocks/mingw/include/txlib.h (13634)
+# 2 0x00422EA9 in C:\Users\79022\Desktop\ElMagazin6\main.exe: txDeleteDC() at c:/users/79022/codeblocks/codeblocks/mingw/include/txlib.h (13656)
+
+# 3 0x0042FA59 in C:\Users\79022\Desktop\ElMagazin6\main.exe: main() at C:/Users/79022/Desktop/ElMagazin6/main.cpp (250):
+
+    248: {
+    249:  txDeleteDC(menuPicture[npic].image);
+=>  250:  txDeleteDC(centralPicture[npic].image);
+    251: }
+    252: 
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::_txBuffer_Delete(HDC__**) at c:\users\79022\codeblocks\codeblocks\mingw\include\txlib.h (10891):
+
+  10889: $1  if (_TX_ARGUMENT_FAILED (dc)) return false;
+  10890: $   if (                   !*dc)  return false;
+=>10891: $   if (_TX_HDC_FAILED     (*dc)) return false;
+  10892: 
+  10893: $   if (!Win32::GetObjectType (Win32::GetCurrentObject (*dc, OBJ_BITMAP))) return false;
+
+# 1 in bool {anonymous}::TX::txDeleteDC(HDC__**) at c:\users\79022\codeblocks\codeblocks\mingw\include\txlib.h (13634):
+
+  13632: 
+  13633: $   HDC  dc = *pdc;
+=>13634: $   bool ok = _txBuffer_Delete (pdc);
+  13635: $   if (!ok) return false;
+  13636: 
+
+# 2 in bool {anonymous}::TX::txDeleteDC(HDC) at c:\users\79022\codeblocks\codeblocks\mingw\include\txlib.h (13656):
+
+  13654: bool txDeleteDC (HDC dc)
+  13655:     {
+=>13656: $1  return txDeleteDC (&dc);
+  13657:     }
+  13658: 
+
+# 3 in int main() at C:\Users\79022\Desktop\ElMagazin6\main.cpp (250):
+
+    248: {
+    249:  txDeleteDC(menuPicture[npic].image);
+=>  250:  txDeleteDC(centralPicture[npic].image);
+    251: }
+    252: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-10-03 23:49:44 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\79022\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 17 2021 20:35:02, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 17 2021 20:35:09
+
+Run file:	C:\Users\79022\Desktop\ElMagazin6\main.exe
+Directory:	C:\Users\79022\Desktop\ElMagazin6
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: C:\Users\79022\Desktop\ElMagazin6\main.exe, файл: c:\users\79022\codeblocks\codeblocks\mingw\include\txlib.h, строка: 10891, функция: bool {anonymous}::TX::_txBuffer_Delete(HDC__**),
+
+Сообщение: Параметр "*dc" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#4: TXLib [Ver: 00173a, Rev: 171, Date: 2021-10-03 23:49:44 +0400], Instance: 0x0050B2FC (32-bit), Flags: CMdRe0, Thread: 0x3230 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00410E8D in C:\Users\79022\Desktop\ElMagazin6\main.exe: _txBuffer_Delete() at c:/users/79022/codeblocks/codeblocks/mingw/include/txlib.h (10891)
+# 1 0x00422C39 in C:\Users\79022\Desktop\ElMagazin6\main.exe: txDeleteDC() at c:/users/79022/codeblocks/codeblocks/mingw/include/txlib.h (13634)
+# 2 0x00422EA9 in C:\Users\79022\Desktop\ElMagazin6\main.exe: txDeleteDC() at c:/users/79022/codeblocks/codeblocks/mingw/include/txlib.h (13656)
+
+# 3 0x0042FA59 in C:\Users\79022\Desktop\ElMagazin6\main.exe: main() at C:/Users/79022/Desktop/ElMagazin6/main.cpp (250):
+
+    248: {
+    249:  txDeleteDC(menuPicture[npic].image);
+=>  250:  txDeleteDC(centralPicture[npic].image);
+    251: }
+    252: 
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::_txBuffer_Delete(HDC__**) at c:\users\79022\codeblocks\codeblocks\mingw\include\txlib.h (10891):
+
+  10889: $1  if (_TX_ARGUMENT_FAILED (dc)) return false;
+  10890: $   if (                   !*dc)  return false;
+=>10891: $   if (_TX_HDC_FAILED     (*dc)) return false;
+  10892: 
+  10893: $   if (!Win32::GetObjectType (Win32::GetCurrentObject (*dc, OBJ_BITMAP))) return false;
+
+# 1 in bool {anonymous}::TX::txDeleteDC(HDC__**) at c:\users\79022\codeblocks\codeblocks\mingw\include\txlib.h (13634):
+
+  13632: 
+  13633: $   HDC  dc = *pdc;
+=>13634: $   bool ok = _txBuffer_Delete (pdc);
+  13635: $   if (!ok) return false;
+  13636: 
+
+# 2 in bool {anonymous}::TX::txDeleteDC(HDC) at c:\users\79022\codeblocks\codeblocks\mingw\include\txlib.h (13656):
+
+  13654: bool txDeleteDC (HDC dc)
+  13655:     {
+=>13656: $1  return txDeleteDC (&dc);
+  13657:     }
+  13658: 
+
+# 3 in int main() at C:\Users\79022\Desktop\ElMagazin6\main.cpp (250):
+
+    248: {
+    249:  txDeleteDC(menuPicture[npic].image);
+=>  250:  txDeleteDC(centralPicture[npic].image);
+    251: }
+    252: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-10-03 23:49:44 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\79022\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 17 2021 20:35:02, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 17 2021 20:35:10
+
+Run file:	C:\Users\79022\Desktop\ElMagazin6\main.exe
+Directory:	C:\Users\79022\Desktop\ElMagazin6
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\79022\Desktop\ElMagazin6Res4\main.exe, файл: c:\users\79022\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13411, функция: bool {anonymous}::TX::txDrawText(double, double, double, double, const char*, unsigned int, HDC),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "text".
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2021-10-03 23:49:44 +0400], Instance: 0x0050A2FC (32-bit), Flags: CMdRe0, Thread: 0x17A0 (Main), GetLastError(): 160 (Неверны один или несколько аргументов), errno: 22 (Invalid argument), _doserrno: 5 (Input/output error). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00420C35 in C:\Users\79022\Desktop\ElMagazin6Res4\main.exe: txDrawText() at c:/users/79022/codeblocks/codeblocks/mingw/include/txlib.h (13411)
+
+# 1 0x0042D278 in C:\Users\79022\Desktop\ElMagazin6Res4\main.exe: drawButton() at C:/Users/79022/Desktop/ElMagazin6Res4/main.cpp (27):
+
+     25:    Win32::RoundRect (txDC(), btn.x, btn.y, btn.x+100, btn.y+30, 20, 20);
+     26:    txSelectFont("Times", 20);
+=>   27:    txDrawText(btn.x, btn.y, btn.x+100, btn.y+30, btn.text);
+     28:  }
+     29: 
+
+# 2 0x0042E49B in C:\Users\79022\Desktop\ElMagazin6Res4\main.exe: main() at C:/Users/79022/Desktop/ElMagazin6Res4/main.cpp (196):
+
+    194:  for (int nk=0; nk<COUNT_BTNS; nk++)
+    195:  {
+=>  196:   drawButton (btn[nk]);
+    197:  }
+    198: 
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txDrawText(double, double, double, double, const char*, unsigned int, HDC) at c:\users\79022\codeblocks\codeblocks\mingw\include\txlib.h (13411):
+
+  13409:                  HDC dc /*= txDC()*/)
+  13410:     {
+=>13411: $1  if (_TX_ARGUMENT_FAILED    (text)) return false;
+  13412: $   if (_TX_DEFAULT_HDC_FAILED (dc))   return false;
+  13413: 
+
+# 1 in void drawButton(Button) at C:\Users\79022\Desktop\ElMagazin6Res4\main.cpp (27):
+
+     25:    Win32::RoundRect (txDC(), btn.x, btn.y, btn.x+100, btn.y+30, 20, 20);
+     26:    txSelectFont("Times", 20);
+=>   27:    txDrawText(btn.x, btn.y, btn.x+100, btn.y+30, btn.text);
+     28:  }
+     29: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-10-03 23:49:44 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\users\79022\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Dec 28 2021 16:11:48, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 28 2021 16:11:54
+
+Run file:	C:\Users\79022\Desktop\ElMagazin6Res4\main.exe
+Directory:	C:\Users\79022\Desktop\ElMagazin6Res4
+
+--------------------------------------------------
